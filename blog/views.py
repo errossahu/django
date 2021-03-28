@@ -1,7 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse 
 
+posts = [
+    {
+        'author':'Yohanes Erros Sahu',
+    }
+]
 def home(request):
-    return HttpResponse('<h1>Blog Name</h1>')
+    return render(request, 'blog/home.html')
 def about(request):
-    return HttpResponse('<h1>About</h1>')    
+    return render(request, 'blog/about.html')   
+
